@@ -48,17 +48,20 @@
 
 .cms-menu__list li ul.group li {
     height: 0px;
+    overflow: hidden;
 }
 
 .cms-menu__list li:hover ul.group li,
 .cms-menu__list li.opened ul.group li {
     min-height: 35px;
     height: unset;
+    overflow: visible;
 }
 
 .cms-menu__list li.opened ul.group li a {
     background: none;
 }
+
 .cms-menu__list li.opened ul.group li:hover,
 .cms-menu__list li.opened ul.group li.current {
     background: #d8e4eb;
