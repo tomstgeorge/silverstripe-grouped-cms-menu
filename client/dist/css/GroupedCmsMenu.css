@@ -2,6 +2,18 @@
     width: 220px !important;
 }
 
+.cms-menu__list li.opened {
+    border-left: none;
+}
+
+.cms-menu__list li.opened a {
+    padding-left: 8px;
+}
+
+.cms-menu__list li.opened a .menu__icon {
+    left: 13px;
+}
+
 .cms-menu__list li.children > a {
     padding-right: 30px;
     position: relative;
