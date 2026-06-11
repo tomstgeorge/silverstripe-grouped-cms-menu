@@ -16,7 +16,6 @@
         }
     ],
     "require": {
-        "silverstripe/framework": "^6.0",
         "silverstripe/admin": "^3.0"
     },
     "extra": {

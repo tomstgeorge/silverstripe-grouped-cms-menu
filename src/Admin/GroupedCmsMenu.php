@@ -35,18 +35,6 @@ class GroupedCmsMenu extends Extension
     private static $menu_groups_alphabetical_sorting = false;
 
     /**
-     * Require the CSS which we need for the menu.
-     *
-     * @return void
-     */
-    public function init()
-    {
-        parent::init();
-
-        Requirements::css('symbiote/silverstripe-grouped-cms-menu:client/dist/css/GroupedCmsMenu.css');
-    }
-
-    /**
      * @return ArrayList
      */
     public function GroupedMainMenu()

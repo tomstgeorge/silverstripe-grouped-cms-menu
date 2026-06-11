@@ -1,54 +1,58 @@
-.cms-menu__list li ul.group {
-    margin: 0 0 0 15px;
-    padding: 0;
+.cms-menu {
+    width: 220px !important;
 }
 
-.cms-menu__list li ul.group,
-.cms-menu__list li ul.group li {
-    list-style: none;
+.cms-menu__list li.children > a {
+    padding-right: 30px;
+    position: relative;
 }
 
-.cms-menu__list li ul.group li a {
-    min-height: 35px;
-}
-
-.cms-menu__list li ul.group li a .text {
-    padding-left: 8px;
-}
-
-.cms-menu__list li a .toggle-children-icon,
-.cms-menu__list li a .toggle-children .toggle-children-icon {
-    background-image: none !important;
-    top: 35% !important;
-}
-
-.cms-menu__list li ul.group {
-    margin: 0 0 0 15px;
-    padding: 0;
-}
-
-.cms-menu__list li ul.group,
-.cms-menu__list li ul.group li {
-    list-style: none;
-}
-
-.cms-menu__list li ul.group li a {
-    min-height: 35px;
-}
-
-.cms-menu__list li ul.group li a .text {
-    padding-left: 8px;
-}
-
-.cms-menu__list li a .toggle-children-icon,
-.cms-menu__list li a .toggle-children .toggle-children-icon {
-    background-image: none !important;
-    top: 35% !important;
-}
-
-.cms-menu__list li ul.group li {
-    height: 0px;
+.cms-menu__list li.children > a .text {
     overflow: hidden;
+}
+
+.cms-menu__list li.children > a:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 6px solid #497792; /* The triangle color */
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
+.cms-menu__list li ul.group {
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+.cms-menu__list li ul.group,
+.cms-menu__list li ul.group li {
+    list-style: none;
+}
+
+.cms-menu__list li ul.group li {
+    height: 0;
+    overflow: hidden;
+}
+
+.cms-menu__list li ul.group li a {
+    min-height: 35px;
+}
+
+.cms-menu__list li ul.group li a .text {
+    padding-left: 8px;
+}
+
+.cms-menu__list li a .toggle-children-icon,
+.cms-menu__list li a .toggle-children .toggle-children-icon {
+    background-image: none !important;
+    top: 35% !important;
 }
 
 .cms-menu__list li:hover ul.group li,
@@ -68,6 +72,5 @@
 }
 
 .cms-menu__list li{
-    background: #d8e4eb;
     background: #005a93;
 }
