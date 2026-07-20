@@ -82,15 +82,15 @@
     overflow: visible;
 }
 
+.cms-menu__list li.opened ul.group li {
+    background: #d8e4eb;
+}
+
 .cms-menu__list li.opened ul.group li a {
     background: none;
 }
 
 .cms-menu__list li.opened ul.group li:hover,
 .cms-menu__list li.opened ul.group li.current {
-    background: #d8e4eb;
-}
-
-.cms-menu__list li {
-    background: #005a93;
+    background: #c5d7e2;
 }
