@@ -17,6 +17,7 @@
 .cms-menu__list li.children > a {
     padding-right: 30px;
     position: relative;
+    cursor: pointer;
 }
 
 .cms-menu__list li.children > a .text {
@@ -33,9 +34,15 @@
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
-    border-top: 6px solid #497792; /* The triangle color */
+    border-top: 6px solid #497792;
     border-right: 6px solid transparent;
     border-left: 6px solid transparent;
+    transition: transform 0.2s ease;
+}
+
+/* Rotate arrow when group is open */
+.cms-menu__list li.children.opened > a:after {
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .cms-menu__list li ul.group {
@@ -48,6 +55,7 @@
     list-style: none;
 }
 
+/* Children hidden by default */
 .cms-menu__list li ul.group li {
     height: 0;
     overflow: hidden;
@@ -67,7 +75,7 @@
     top: 35% !important;
 }
 
-.cms-menu__list li:hover ul.group li,
+/* Only show children when opened (click-toggled), NOT on hover */
 .cms-menu__list li.opened ul.group li {
     min-height: 35px;
     height: unset;
@@ -83,6 +91,6 @@
     background: #d8e4eb;
 }
 
-.cms-menu__list li{
+.cms-menu__list li {
     background: #005a93;
 }
