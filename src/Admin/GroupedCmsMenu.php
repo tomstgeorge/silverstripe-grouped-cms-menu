@@ -178,7 +178,7 @@ class GroupedCmsMenu extends Extension
         $menuIconStyling = '';
         foreach ($children as $child) {
             foreach ($groupSettings as $group => $candidates) {
-                $candidates = str_replace('-', '\\', $candidates['children']);
+                $candidateClasses = str_replace('-', '\\', $candidates['children']);
                 $class = $child->MenuItem->controller;
                 $iconClass = null;
                 $menuIcon = LeftAndMain::menu_icon_for_class($class);
@@ -189,13 +189,15 @@ class GroupedCmsMenu extends Extension
                     $iconClass = $this->getIcon($group, $class);
                 }
 
-                if (in_array($class, $candidates)) {
+                $sortOrder = array_search($class, $candidateClasses);
+                if ($sortOrder !== false) {
                     $menuItem = $class::create();
                     $menuItem->setField('ChildTitle', $this->getTitle($group, $class));
                     $menuItem->setField('Code', str_replace('\\', '-', $class));
                     $menuItem->setField('IconClass', $iconClass);
                     $menuItem->setField('HasCSSIcon', strtolower(Convert::raw2htmlname(str_replace('\\', '-', $class))));
                     $menuItem->setField('LinkingMode', $child->LinkingMode);
+                    $menuItem->setField('SortOrder', $sortOrder);
                     $filtered->push($menuItem);
                 }
             }
